@@ -1,4 +1,4 @@
-package ServerSocket.Ejer1;
+package ServerSocket;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.net.Socket;
 
 public class Cliente {
     public static void main(String[] args) throws IOException {
-        Socket socket = new Socket("localhost",8080);
+        Socket socket = new Socket("localhost",8082);
         BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         String mensaje = in.readLine();
         System.out.println("Mensaje del servidor: " + mensaje);
